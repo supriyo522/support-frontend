@@ -1,7 +1,7 @@
 import { io } from 'socket.io-client';
 
 const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || (
-  window.location.hostname === 'localhost' ? 'http://localhost:5000' : window.location.origin
+  window.location.hostname === 'localhost' ? 'http://localhost:5000' : 'https://support-backend-73f2.onrender.com'
 );
 
 export const connectSocket = (token) => {
