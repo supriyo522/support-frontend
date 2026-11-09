@@ -1,0 +1,51 @@
+* { box-sizing: border-box; }
+body { margin: 0; font: 14px/1.5 system-ui, sans-serif; color: #111827; background: #f3f4f6; }
+h1 { margin: 0 0 12px; font-size: 22px; }
+a { color: #4f46e5; text-decoration: none; }
+input, select, textarea { font: inherit; padding: 8px 10px; border: 1px solid #d1d5db; border-radius: 6px; background: #fff; width: 100%; }
+.toolbar { display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+.toolbar > * { width: auto; flex: 1; min-width: 130px; }
+button { font: inherit; cursor: pointer; }
+button.primary { background: #4f46e5; color: #fff; border: 0; padding: 9px 16px; border-radius: 6px; }
+button.link { background: none; border: 0; color: #4f46e5; padding: 4px 8px; }
+.card { background: #fff; border-radius: 10px; padding: 16px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,.06); display: flex; flex-direction: column; gap: 8px; }
+.card.row { flex-direction: row; justify-content: space-between; align-items: center; }
+.muted { color: #6b7280; } .error { color: #b91c1c; } .center { text-align: center; padding: 40px; }
+.shell { display: flex; min-height: 100vh; }
+.shell aside { width: 220px; background: #1e1b4b; color: #fff; padding: 20px; display: flex; flex-direction: column; gap: 16px; }
+.shell aside h2 { margin: 0; font-size: 18px; }
+.shell nav { display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.shell nav a { color: #c7d2fe; padding: 8px 10px; border-radius: 6px; }
+.shell nav a.active { background: #4338ca; color: #fff; }
+.shell .me { font-size: 13px; } .shell .me .link { color: #c7d2fe; padding: 0; }
+.shell main { flex: 1; padding: 24px; overflow: auto; }
+.badge { background: #4338ca; padding: 1px 8px; border-radius: 10px; font-size: 11px; }
+.login { max-width: 360px; margin: 12vh auto; }
+table { width: 100%; background: #fff; border-collapse: collapse; border-radius: 10px; overflow: hidden; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #f3f4f6; }
+th { background: #f9fafb; font-size: 12px; text-transform: uppercase; color: #6b7280; }
+.pill { padding: 2px 8px; border-radius: 10px; font-size: 12px; background: #e5e7eb; }
+.pill.angry, .pill.urgent { background: #fee2e2; color: #991b1b; }
+.pill.negative, .pill.high { background: #ffedd5; color: #9a3412; }
+.pill.positive, .pill.low { background: #dcfce7; color: #166534; }
+.ticket { display: grid; grid-template-columns: 1fr 280px; gap: 16px; align-items: start; }
+.messages { background: #fff; border-radius: 10px; padding: 12px; max-height: 55vh; overflow: auto; display: flex; flex-direction: column; gap: 8px; }
+.msg { padding: 8px 12px; border-radius: 8px; background: #f3f4f6; max-width: 80%; }
+.msg.customer { align-self: flex-start; } .msg.agent { align-self: flex-end; background: #e0e7ff; }
+.msg.ai { align-self: flex-end; background: #ecfdf5; } .msg.system { align-self: center; font-style: italic; color: #6b7280; background: none; }
+.msg.draft { border: 2px dashed #86efac; background: #f0fdf4; }
+.msg .who { font-size: 11px; text-transform: uppercase; color: #6b7280; } .msg .meta { font-size: 12px; color: #6b7280; margin-top: 4px; }
+.thumb { background: none; border: 1px solid transparent; border-radius: 6px; opacity: .5; } .thumb.on { opacity: 1; border-color: #4f46e5; }
+.composer { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; align-items: flex-start; }
+.details label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: #6b7280; }
+.grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; } .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.stat .big { font-size: 28px; font-weight: 700; }
+.bar-row { display: grid; grid-template-columns: 90px 1fr 30px; gap: 8px; align-items: center; }
+.bar { background: #e5e7eb; height: 10px; border-radius: 5px; overflow: hidden; } .bar div { background: #4f46e5; height: 100%; }
+/* chat widget */
+.chat { height: 100vh; display: flex; flex-direction: column; background: #fff; padding: 12px; gap: 8px; }
+.chat.start { justify-content: center; }
+.chat-log { flex: 1; overflow: auto; display: flex; flex-direction: column; gap: 8px; }
+.bubble { padding: 8px 12px; border-radius: 12px; max-width: 85%; } .bubble small { color: #6b7280; display: block; }
+.bubble.mine { align-self: flex-end; background: #4f46e5; color: #fff; } .bubble.theirs { align-self: flex-start; background: #f3f4f6; }
+.chat-input { display: flex; gap: 8px; } .chat-input input { flex: 1; }
